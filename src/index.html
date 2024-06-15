@@ -9,7 +9,26 @@
     <div id="root"></div>
     <script>
         // 동적객체만들기
-        document.querySelector("#root").innerHTML = "<h1>동적객체</h1>"
+        document.querySelector("#root").innerHTML = "<h1>동적객체</h1>";
+        // navi데이터 동적객체
+        const navidata = [{
+            navitext : "네이버",
+            href : "http://www.naver.com"
+            },
+            {
+            navitext : "다음",
+            href : "http://www.daum.com"
+            },
+            {
+            navitext : "구글",
+            href : "http://www.google.com"
+            }]
+        document.querySelector("#root").innerHTML += `
+                <a href=${navidata[0].href} >
+                        ${navidata[0].navitext} 
+                </a>
+                 `
+                 
     </script>
 </body>
 </html>
