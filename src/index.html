@@ -28,7 +28,17 @@
                         ${navidata[0].navitext} 
                 </a>
                  `
-                 
+      
+        let mytag = "";
+        mytag += `<h2>네비게이션</h2>`;
+        mytag += `<ul>`;
+            for( x in navidata){
+                mytag += `<li><a href='${navidata[x].href}'>${navidata[x].navitext}</a></li>`;
+            } 
+        mytag += `</ul>`;
+
+        document.querySelector("#root").innerHTML = mytag;
+
     </script>
 </body>
 </html>
